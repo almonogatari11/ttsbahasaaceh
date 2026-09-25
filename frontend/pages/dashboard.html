@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — TTS Aceh</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="app-navbar">
+  <div class="navbar-inner">
+    <a href="dashboard.html" class="navbar-brand">
+      <i data-lucide="grid-3x3"></i> TTS Aceh
+    </a>
+    <div class="navbar-actions">
+      <span id="username-label" class="username-chip"></span>
+      <button id="btn-logout" class="btn btn-outline-danger btn-sm">Keluar</button>
+    </div>
+  </div>
+</nav>
+
+<div class="app-container has-top-glow">
+
+  <div id="guest-banner" class="guest-banner d-none">
+    Kamu masuk sebagai <strong>Tamu</strong>. Progres tidak tersimpan permanen — daftar akun untuk menyimpan riwayat belajarmu.
+  </div>
+
+  <div class="page-header fade-up">
+    <h2>Halo, <span id="welcome-name">...</span></h2>
+    <p>Ringkasan progres belajar Bahasa Aceh kamu.</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card modern fade-up stagger-1">
+      <div class="stat-icon stat-icon-total"><i data-lucide="layout-grid"></i></div>
+      <div class="stat-number" id="stat-total">—</div>
+      <div class="stat-label">Total Paket</div>
+    </div>
+    <div class="stat-card modern fade-up stagger-2">
+      <div class="stat-icon stat-icon-selesai"><i data-lucide="check-circle-2"></i></div>
+      <div class="stat-number" id="stat-selesai">—</div>
+      <div class="stat-label">Selesai</div>
+    </div>
+    <div class="stat-card modern fade-up stagger-3">
+      <div class="stat-icon stat-icon-sedang"><i data-lucide="loader-circle"></i></div>
+      <div class="stat-number" id="stat-sedang">—</div>
+      <div class="stat-label">Sedang Dikerjakan</div>
+    </div>
+    <div class="stat-card modern fade-up stagger-4">
+      <div class="stat-icon stat-icon-belum"><i data-lucide="circle-dashed"></i></div>
+      <div class="stat-number" id="stat-belum">—</div>
+      <div class="stat-label">Belum Dikerjakan</div>
+    </div>
+  </div>
+
+  <div class="btn-mulai-wrap">
+    <a href="paket.html" class="btn btn-primary btn-lg fade-up stagger-4" id="btn-mulai">
+      <i data-lucide="play"></i> Mulai / Lanjutkan Bermain
+    </a>
+  </div>
+
+  <!-- Indikator scroll ke bawah -->
+  <button class="scroll-hint" id="scroll-hint" aria-label="Gulir untuk info lebih lanjut">
+    <span>Lihat cara kerja &amp; info Bahasa Aceh</span>
+    <i data-lucide="chevron-down"></i>
+  </button>
+
+  <!-- ── Section: Cara Kerja TTS ─────────────────────────────── -->
+  <section class="info-section fade-up" id="cara-kerja">
+    <div class="info-section-head">
+      <span class="info-eyebrow">Cara Kerja</span>
+      <h3>Bagaimana TTS Bahasa Aceh Ini Bekerja</h3>
+      <p>Empat langkah sederhana untuk mulai belajar sambil bermain.</p>
+    </div>
+    <div class="how-it-works-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <div class="how-icon"><i data-lucide="package-open"></i></div>
+        <h4>Pilih Paket</h4>
+        <p>Setiap paket berisi 10 soal seputar kosakata Bahasa Aceh, disusun dari yang mudah ke yang menantang.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <div class="how-icon"><i data-lucide="book-open-text"></i></div>
+        <h4>Baca Petunjuk</h4>
+        <p>Setiap kotak silang punya petunjuk mendatar atau menurun — bisa ditampilkan dalam Bahasa Aceh maupun Bahasa Indonesia.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <div class="how-icon"><i data-lucide="keyboard"></i></div>
+        <h4>Isi Jawaban</h4>
+        <p>Ketik jawabanmu langsung di kotak. Sistem otomatis memeriksa — kotak akan berubah hijau jika benar, merah jika salah.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">4</div>
+        <div class="how-icon"><i data-lucide="trophy"></i></div>
+        <h4>Selesaikan &amp; Pantau Progres</h4>
+        <p>Progresmu tersimpan otomatis di akun (atau sementara jika sebagai tamu), terlihat langsung di dashboard ini.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section: Tentang Bahasa Aceh ────────────────────────── -->
+  <section class="info-section fade-up" id="tentang-aceh">
+    <div class="about-card">
+      <div class="about-text">
+        <span class="info-eyebrow">Mengenal Lebih Dekat</span>
+        <h3>Tentang Bahasa Aceh</h3>
+        <p>
+          Bahasa Aceh (<em>Bahsa Acèh</em>) adalah bahasa yang dituturkan oleh suku Aceh,
+          terutama di pesisir dan wilayah utara Provinsi Aceh, Indonesia. Bahasa ini
+          termasuk dalam rumpun bahasa Aceh–Chamik, cabang dari rumpun Austronesia yang
+          juga berkerabat dengan bahasa-bahasa Chamik di Kamboja dan Vietnam — sebuah
+          jejak sejarah migrasi maritim yang menarik.
+        </p>
+        <p>
+          Bahasa Aceh memiliki kekayaan fonetik yang khas, termasuk vokal nasal dan
+          sejumlah bunyi yang tidak ditemukan dalam Bahasa Indonesia. Bahasa ini juga
+          erat kaitannya dengan tradisi lisan Aceh seperti <em>hikayat</em>, <em>syair</em>,
+          dan nasihat adat yang diwariskan turun-temurun.
+        </p>
+        <p>
+          Melalui permainan TTS ini, kamu bisa belajar kosakata sehari-hari, istilah adat,
+          dan makna budaya di baliknya — dengan cara yang santai dan interaktif.
+        </p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-item">
+          <i data-lucide="map-pin"></i>
+          <div><strong>Wilayah Penutur</strong><span>Pesisir &amp; utara Provinsi Aceh</span></div>
+        </div>
+        <div class="fact-item">
+          <i data-lucide="users"></i>
+          <div><strong>Rumpun Bahasa</strong><span>Austronesia — cabang Aceh–Chamik</span></div>
+        </div>
+        <div class="fact-item">
+          <i data-lucide="scroll-text"></i>
+          <div><strong>Tradisi Lisan</strong><span>Hikayat, syair, nasihat adat</span></div>
+        </div>
+        <div class="fact-item">
+          <i data-lucide="sparkles"></i>
+          <div><strong>Keunikan</strong><span>Vokal nasal &amp; fonetik khas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/transitions.js"></script>
+<script src="../js/dashboard.js"></script>
+<script>
+  lucide.createIcons();
+  document.getElementById('scroll-hint')?.addEventListener('click', () => {
+    document.getElementById('cara-kerja')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

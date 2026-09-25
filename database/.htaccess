@@ -1,0 +1,4 @@
+# Cegah file database (.sqlite) diakses/didownload langsung lewat URL browser
+<FilesMatch "\.(sqlite|sql)$">
+    Require all denied
+</FilesMatch>

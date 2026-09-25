@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CC785C"/>
+      <stop offset="100%" stop-color="#A9583E"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="42" fill="#FAF9F5"/>
+  <circle cx="128" cy="128" r="88" fill="url(#grad)"/>
+  <circle cx="128" cy="128" r="68" fill="#FAF9F5"/>
+  <polygon points="128,52 146,118 216,118 158,158 176,224 128,184 80,224 98,158 40,118 110,118" fill="#181715"/>
+  <text x="128" y="206" text-anchor="middle" font-family="Inter, sans-serif" font-size="40" font-weight="700" fill="#181715">TTS</text>
+</svg>
